@@ -3,10 +3,12 @@ netpad3
 
 UDP protocol, default port 6723
 
-Each message contains at least 2 sections, separated by `;`.  Number of inputs should not change during a session, and will likely cause a reconnection.
+Each message consists of one or more sections, separated by `;`.  Number of inputs should not change during a session, and will likely cause a reconnection.
+
+Use the same port throughout a session, as it is used to identify your connection.
 
 ### Section 1: Axes
-List of axis values, from -32767 to 32767, separated by `,`
+List of axis values, integers from -32767 to 32767, separated by `,`
 
 ### Section 2: Buttons
 Buttons specified as binary digits, with a leading 1, sent as hexadecimal.
